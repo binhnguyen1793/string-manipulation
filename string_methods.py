@@ -10,6 +10,9 @@ def add_comma(a_string):
     example: add_comma("John Peter Jude") => "John, Peter, Jude"
     """
     pass  # YOUR CODE HERE
+def add_comma (a_string) :
+    return a_string.replace(' ',', ')
+
 
 def belongs_to(a_string, a_word):
     """
@@ -18,12 +21,21 @@ def belongs_to(a_string, a_word):
     """
     pass  # YOUR CODE HERE
 
+def belongs_to(a_string, a_word) :
+    return a_word in a_string
+
+
+
 def count_repetition(a_string, a_substring):
     """
     returns how many times a_substring occurs in a_string
     example: count_repetition("000123000123", "0") => 6
     """
     pass  # YOUR CODE HERE
+
+def count_repetition(a_string, a_substring):
+    return a_string.count(a_substring)
+
 
 def is_a_question(a_string):
     """
@@ -32,6 +44,10 @@ def is_a_question(a_string):
     """
     pass  # YOUR CODE HERE
 
+def is_a_question(a_string):
+    return a_string.endswith("?")
+
+
 def remove_surrounding_whitespaces(a_string):
     """
     returns a copy of the string with leading and trailing whitespaces removed
@@ -39,12 +55,22 @@ def remove_surrounding_whitespaces(a_string):
     """
     pass  # YOUR CODE HERE
 
+def remove_surrounding_whitespaces(a_string):
+    return a_string.strip()
+
+
+
 def replace(initial_string, old_letter, new_letter):
     """
     returns a copy of the string with the new letter replacing the old one
     example: replace("casanova", "a", "o") => "cosonovo"
     """
     pass  # YOUR CODE HERE
+
+def replace(initial_string, old_letter, new_letter):
+    return initial_string.replace(old_letter,new_letter)
+
+
 
 def full_description_concatenation(first_name, last_name, age):
     """
@@ -54,6 +80,10 @@ def full_description_concatenation(first_name, last_name, age):
     """
     pass  # YOUR CODE HERE
 
+def full_description_concatenation(first_name, last_name, age):
+    return first_name.capitalize() + " " + last_name.capitalize()  + " " + "is"  + " " + str(age)
+
+
 def full_description_formatting(first_name, last_name, age):
     """
     returns a sentence with the first_name and the last_name capitalized and
@@ -62,3 +92,5 @@ def full_description_formatting(first_name, last_name, age):
     """
     pass  # YOUR CODE HERE
 
+def full_description_formatting(first_name, last_name, age):
+    return f'{first_name.capitalize()} {last_name.capitalize()} is {age}'
